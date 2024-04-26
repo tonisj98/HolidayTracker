@@ -1,13 +1,18 @@
+// app.component.ts
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { TableModule } from 'primeng/table';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
+  imports: [TableModule],
+  standalone: true
 })
 export class AppComponent {
-  title = 'holidaysTracker';
+  cars = [
+    {id: 1, brand: 'Toyota', model: 'Corolla'},
+    {id: 2, brand: 'Honda', model: 'Civic'},
+    {id: 3, brand: 'Ford', model: 'Focus'}
+  ];
 }
